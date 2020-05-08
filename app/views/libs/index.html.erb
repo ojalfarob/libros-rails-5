@@ -1,9 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Libs</h1>
+<div class="jumbotron">
+Libros
+</div>
 
-<table>
-  <thead>
+<div class="container">
+
+
+<table class="table">
+  <thead class="table-primary">
     <tr>
       <th>Nombre</th>
       <th>Descrip</th>
@@ -16,14 +21,14 @@
       <tr>
         <td><%= lib.nombre %></td>
         <td><%= lib.descrip %></td>
-        <td><%= link_to 'Show', lib %></td>
+        <td><%= link_to 'Show' , lib  %></td>
         <td><%= link_to 'Edit', edit_lib_path(lib) %></td>
-        <td><%= link_to 'Destroy', lib, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy' , lib, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
+</div>
 
 <%= link_to 'New Lib', new_lib_path %>
