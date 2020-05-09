@@ -10,12 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200509231425) do
+ActiveRecord::Schema.define(version: 20200509232301) do
 
   create_table "books", force: :cascade do |t|
     t.string "name"
     t.text "context"
     t.integer "num"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pencils", force: :cascade do |t|
+    t.string "name"
+    t.text "desc"
+    t.integer "larg"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

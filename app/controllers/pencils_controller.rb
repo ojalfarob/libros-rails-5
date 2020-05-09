@@ -1,0 +1,2 @@
+class PencilsController < ApplicationController
+end
