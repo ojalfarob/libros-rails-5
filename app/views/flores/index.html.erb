@@ -1,0 +1,33 @@
+<div class="container">
+<h1>Floristeria</h1>
+
+<table class="table">
+    <thead  class="bg-primary">
+        <tr>
+            <td>
+            Nombre
+            </td>
+            <td>
+            Descripcion
+            </td>
+            <td>
+            total
+            </td>
+            <td>
+            Opciones
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+    <% @flores.each do |flor| %>
+        <tr>
+            <td><%=flor.nombre %></td>
+            <td><%=flor.desc %></td>
+            <td><%=flor.total %></td>
+            <td></td>
+        </tr>
+    <% end %>    
+    </tbody>
+</table>
+
+</div>
