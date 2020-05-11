@@ -1,0 +1,13 @@
+<%= form_for @estudens do |f| %>
+  <div>
+    <%= f.label :nombre %>
+    <%= f.text_field :nombre %>
+  </div>
+  <div>
+    <%= f.label :edad %>
+    <%= f.number_field :edad %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
