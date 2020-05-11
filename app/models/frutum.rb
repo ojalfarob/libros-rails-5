@@ -1,0 +1,2 @@
+class Frutum < ApplicationRecord
+end

@@ -1,0 +1,28 @@
+<div class="container">
+<h1>Bienvenidos Estudiantes</h1>
+
+
+<table class="table">
+    <thead class="bg-primary">
+        <tr>
+            <td>Nombre</td>
+            <td>Edad</td>
+            <td class="width=100 ml-auto"><%= link_to "Nuevo",estudiantes_new_path,class:"btn btn-primary"%></td>
+            
+        </tr>
+    </thead>
+    <tbody>
+    <% @estudens.each do |estudent| %>
+            <tr>
+                <td> <%= estudent.nombre %> </td>
+                <td> <%= estudent.edad %> </td>
+                <td class="width=100 ml-auto"> 
+                <%= link_to "Edit",estudiantes_new_path,class:"btn btn-primary ml-auto"%>
+                    <%= link_to "Edit",estudiantes_new_path,class:"btn btn-danger ml-auto"%>
+                 </td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+
+</div>
