@@ -1,0 +1,2 @@
+class Flor < ApplicationRecord
+end

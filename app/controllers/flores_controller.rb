@@ -1,0 +1,2 @@
+class FloresController < ApplicationController
+end
