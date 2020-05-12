@@ -31,7 +31,7 @@ class EstudiantesController < ApplicationController
     end
 
     def destroy
-        @estudens = Estudiante.find(params{:id})
+        @estudens = Estudiante.find(params[:id])
         if @estudens.destroy
             redirect_to estudiantes_index_path
         end
