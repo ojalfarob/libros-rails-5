@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'mascotas/index', to: 'mascotas#index'
   get 'mascotas/new', to: 'mascotas#new'
   post 'mascotas/', to: 'mascotas#create'
-  get 'mascotas/:id', to: 'mascotas#show', as: 'mascotas'
+  get 'mascotas/:id', to: 'mascotas#show', as: 'mascota'
   get 'mascotas/:id/edit', to: 'mascotas#edit', as: 'mascotas_edit'
   patch 'mascotas/:id', to: 'mascotas#update'
   put 'mascotas/:id', to: 'mascotas#update'

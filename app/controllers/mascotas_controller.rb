@@ -33,7 +33,7 @@ class MascotasController < ApplicationController
         @mascotas = Mascotum.find(params[:id])
         if @mascotas.destroy
         redirect_to mascotas_index_path
-        
+        end
     end
 
 
