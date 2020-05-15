@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   delete 'mascotas/:id(.:format)', :to => 'mascotas#destroy'
 
   get 'perros/index', to: 'perros#index'
+  get 'perros/new', to: 'perros#new'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
