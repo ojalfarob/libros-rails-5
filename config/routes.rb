@@ -5,7 +5,13 @@ Rails.application.routes.draw do
 
   get 'mascotas/index', to: 'mascotas#index'
   get 'mascotas/new', to: 'mascotas#new'
-  post 'mascotas/create', to: 'mascotas#create'
+  post 'mascotas/', to: 'mascotas#create'
+  get 'mascotas/:id', to: 'mascotas#show', as: 'mascotas'
+  get 'mascotas/:id/edit', to: 'mascotas#edit', as: 'mascotas_edit'
+  patch 'mascotas/:id', to: 'mascotas#update'
+  put 'mascotas/:id', to: 'mascotas#update'
+
+  delete 'mascotas/:id(.:format)', :to => 'mascotas#destroy'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

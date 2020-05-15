@@ -16,8 +16,28 @@ class MascotasController < ApplicationController
         end
     end
 
+    def edit
+        @mascotas = Mascotum.find(params[:id]) 
+    end
+
+    def update
+        @mascotas = Mascotum.find(params[:id])
+        if @mascotas.update(pro_params)
+        redirect_to mascotas_index_path
+        else
+           render :edit
+        end
+    end
+
+    def destroy
+        @mascotas = Mascotum.find(params[:id])
+        if @mascotas.destroy
+        redirect_to mascotas_index_path
+        
+    end
+
 
     def pro_params
-        params.require(:mascotas).permit(:nombre,:descrip,:cantidad)
+        params.require(:mascotum).permit(:nombre,:descrip,:cantidad)
     end
 end
