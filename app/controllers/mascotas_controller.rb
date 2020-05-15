@@ -1,0 +1,2 @@
+class MascotasController < ApplicationController
+end
