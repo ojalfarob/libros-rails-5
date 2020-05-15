@@ -14,7 +14,9 @@
                    <td><%= mascota.nombre%> </td>
                     <td><%= mascota.descrip%>  </td>
                     <td><%= mascota.cantidad%>  </td>
-                    <td>  </td> 
+                    <td> <%= link_to "Edit" ,mascotas_edit_path(mascota),class:"btn btn-primary"%>
+                        <%= link_to "Eliminar" ,mascotas, method: :delete, data: { confirm: "Deseas eliminar este artículo?"}  ,class:"btn btn-danger"%>
+                     </td> 
                 <% end %>
             </tbody>
         </table>
