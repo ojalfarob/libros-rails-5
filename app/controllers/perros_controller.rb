@@ -28,6 +28,13 @@ class PerrosController < ApplicationController
         end
     end
 
+    def destroy
+        @pers = Perro.find(params[:id])
+        if @pers.destroy
+            redirect_to perros_index_path
+        end
+    end
+
     def perros_params
         params.require(:perro).permit(:nombre,:descrip)
     end

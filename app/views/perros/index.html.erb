@@ -15,7 +15,7 @@
                     <td> <%= perro.nombre%> </td>
                     <td> <%= perro.descrip%> </td>
                     <td> <%= link_to "edit",perros_edit_path(perro),class:"btn btn-primary"%> 
-                    <%= link_to "delete",class:"btn btn-danger"%> </td>
+                    <%= link_to "delete",perro,method: :delete, data: { confirm: "desea eliminarlo"} , class:"btn btn-danger"%> </td>
                 </tr>
                 <% end %>
             </tbody>

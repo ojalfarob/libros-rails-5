@@ -21,5 +21,7 @@ Rails.application.routes.draw do
   patch 'perros/:id', to: 'perros#update'
   put 'perros/:id', to: 'perros#update'
 
+  delete 'perros/:id(.:format)', :to => 'perros#destroy'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
