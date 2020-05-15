@@ -5,16 +5,16 @@
                 <tr>
                     <td> Nombre </td>
                     <td> descripcion </td>
-                    <td> <%= link_to "New",class:"btn btn-primary"%> </td>
+                    <td> <%= link_to "New",perros_new_path,class:"btn btn-primary"%> </td>
                 </tr>
             </thead>
             <tbody>
-                <% @perros.each do |perro|%>
+                <% @pers.each do |perro|%>
                     
                 <tr>
                     <td> <%= perro.nombre%> </td>
                     <td> <%= perro.descrip%> </td>
-                    <td> <%= link_to "edit",class:"btn btn-primary"%> 
+                    <td> <%= link_to "edit",perros_edit_path(perro),class:"btn btn-primary"%> 
                     <%= link_to "delete",class:"btn btn-danger"%> </td>
                 </tr>
                 <% end %>

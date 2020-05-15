@@ -15,6 +15,11 @@ Rails.application.routes.draw do
 
   get 'perros/index', to: 'perros#index'
   get 'perros/new', to: 'perros#new'
+  post 'perros/', to: 'perros#create'
+  get 'perros/:id', to: 'perros#show', as: 'perro'
+  get 'perros/:id/edit', to: 'perros#edit', as: 'perros_edit'
+  patch 'perros/:id', to: 'perros#update'
+  put 'perros/:id', to: 'perros#update'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
